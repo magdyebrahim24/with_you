@@ -1,0 +1,1 @@
+enum UserType{All,Tour_Guide,Photographer,Tourist}
