@@ -1,13 +1,13 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:with_me/common/custom_widgets/custom_button.dart';
 import 'package:with_me/common/custom_widgets/text_form_field.dart';
+import 'package:with_me/common/domain/use_cases/set_login_usecase.dart';
 import 'package:with_me/common/utils/app_style/app_colors/app_colors.dart';
 import 'package:with_me/filter/models/country.dart';
 import 'package:with_me/filter/models/languages.dart';
 import 'package:with_me/filter/widgets/drop_down_button.dart';
 import 'package:with_me/home_page/ui/home_page.dart';
+import 'package:with_me/host_page.dart';
 
 class CompleteRegisterPage extends StatefulWidget {
   const CompleteRegisterPage({Key? key}) : super(key: key);
@@ -17,6 +17,7 @@ class CompleteRegisterPage extends StatefulWidget {
 }
 
 class _CompleteRegisterPageState extends State<CompleteRegisterPage> {
+  final SetLogInUseCase _setLogInUseCase = SetLogInUseCase();
   final _formKey = GlobalKey<FormState>();
   String? _firstName;
   String? _lastName;
@@ -109,25 +110,6 @@ class _CompleteRegisterPageState extends State<CompleteRegisterPage> {
                     onPressed: _registerFun,
                     text: "Next",
                   ),
-
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text("Don\'t Have an Account?"),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      InkWell(
-                        onTap: () => Navigator.of(context).pop(),
-                        child: const Text(
-                          "LogIn Now",
-                          style: TextStyle(
-                              color: Colors.white, fontWeight: FontWeight.bold),
-                        ),
-                      )
-                    ],
-                  )
                 ],
               ),
             ),
@@ -139,10 +121,11 @@ class _CompleteRegisterPageState extends State<CompleteRegisterPage> {
   }
   void _registerFun() {
     if (_formKey.currentState!.validate()) {
+      _setLogInUseCase(true);
       Navigator.pushReplacement(
           context,
           MaterialPageRoute(
-            builder: (context) => const HomePage(),
+            builder: (context) => const HostPage(),
           ));
     }
   }

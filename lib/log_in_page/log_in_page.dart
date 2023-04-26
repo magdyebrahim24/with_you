@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:with_me/common/custom_widgets/custom_button.dart';
 import 'package:with_me/common/custom_widgets/text_form_field.dart';
+import 'package:with_me/common/domain/use_cases/set_login_usecase.dart';
 import 'package:with_me/common/utils/app_style/app_colors/app_colors.dart';
 import 'package:with_me/home_page/ui/home_page.dart';
+import 'package:with_me/host_page.dart';
 import 'package:with_me/register_page/check_register_type_page.dart';
 
 class LogInPage extends StatefulWidget {
@@ -13,6 +15,8 @@ class LogInPage extends StatefulWidget {
 }
 
 class _LogInPageState extends State<LogInPage> {
+  final SetLogInUseCase _setLogInUseCase = SetLogInUseCase();
+
   final _formKey = GlobalKey<FormState>();
   String? _email;
   String? _password;
@@ -81,7 +85,6 @@ class _LogInPageState extends State<LogInPage> {
                     onPressed: _onLogIn,
                     text: "Log In",
                   ),
-
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -109,13 +112,14 @@ class _LogInPageState extends State<LogInPage> {
     );
   }
 
-  void _onLogIn() {
+  void _onLogIn() async {
     if (_formKey.currentState!.validate()) {
       Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => const HomePage(),
+            builder: (context) => const HostPage(),
           ));
+      await _setLogInUseCase(true);
     }
   }
 

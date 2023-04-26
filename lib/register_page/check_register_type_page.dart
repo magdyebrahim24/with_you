@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:with_me/common/custom_widgets/custom_button.dart';
 import 'package:with_me/common/utils/app_style/app_colors/app_colors.dart';
+import 'package:with_me/register_page/register_page.dart';
 
 import '../common/custom_widgets/custom_appbar.dart';
 
@@ -19,24 +20,35 @@ class RegisterTypePage extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: SafeArea(
-          child: Column(
-              children: [
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * .1,
-                ),
-                const Text(
-                  "Register as",
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * .15,
-                ),
-                CustomButton(onPressed: () {}, text: "Tour Guide"),
-                CustomButton(onPressed: () {}, text: "Photographer"),
-                CustomButton(onPressed: () {}, text: "Tourist"),
-              ]),
+          child: Column(children: [
+            SizedBox(
+              height: MediaQuery.of(context).size.height * .1,
+            ),
+            const Text(
+              "Register as",
+              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * .15,
+            ),
+            CustomButton(
+                onPressed: () => _navigateToRegisterPage(context),
+                text: "Tour Guide"),
+            CustomButton(
+                onPressed: () => _navigateToRegisterPage(context),
+                text: "Photographer"),
+            CustomButton(
+                onPressed: () => _navigateToRegisterPage(context),
+                text: "Tourist"),
+          ]),
         ),
       ),
     );
+  }
+
+  void _navigateToRegisterPage(context) {
+    Navigator.of(context).push(MaterialPageRoute(
+      builder: (context) => const RegisterPage(),
+    ));
   }
 }

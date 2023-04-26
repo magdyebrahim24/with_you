@@ -7,7 +7,7 @@ const Map<String, dynamic> apiHomeLocalData = {
   "data": [
     {
       "image":
-          "https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQNUcfG_02ZSdTBJ7zEXxrIDtOoIdL5ncAIA&usqp=CAU",
       "name": "Eng / Sama",
       "rate": 4,
       "address": "Egypt / Cairo / St.255",
@@ -85,7 +85,7 @@ const Map<String, dynamic> apiHomeLocalData = {
     },
     {
       "image":
-          "https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg",
+          "https://www.bentbusinessmarketing.com/wp-content/uploads/2013/02/35844588650_3ebd4096b1_b-1024x683.jpg",
       "name": "Youssef Samir",
       "rate": 2,
       "address": "Egypt / Cairo / St.255",
@@ -124,7 +124,7 @@ const Map<String, dynamic> apiHomeLocalData = {
     },
     {
       "image":
-          "https://t4.ftcdn.net/jpg/03/83/25/83/360_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg",
+          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9dcJbhAFcJIWpYRVvIXpARwI_c8tlisnI7A&usqp=CAU",
       "name": "Maha Mohamed",
       "rate": 5,
       "address": "Egypt / Cairo / St.255",
@@ -159,6 +159,18 @@ const Map<String, dynamic> apiHomeLocalData = {
       "gender": Gender.Female,
       "country": Country.Egypt,
       "userType":UserType.Photographer,
-    }
+    },
+    {
+      "image": "https://www.mnp.ca/-/media/foundation/integrations/personnel/2020/12/16/13/57/personnel-image-4483.jpg?h=800&w=600&hash=9D5E5FCBEE00EB562DCD8AC8FDA8433D",
+      "name": "Magdy Ebrahim",
+      "rate": 5,
+      "address": "Egypt / Mansoura / El hank manta",
+      "price": 1000000,
+      "age": 24,
+      "language": Languages.Arabic,
+      "gender": Gender.Male,
+      "country": Country.Egypt,
+      "userType":UserType.Tourist,
+    },
   ]
 };
