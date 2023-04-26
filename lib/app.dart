@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:with_me/splash/splash_page.dart';
 
+
 class TheApp extends StatelessWidget {
   const TheApp({Key? key}) : super(key: key);
 

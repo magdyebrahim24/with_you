@@ -10,6 +10,7 @@ import 'package:with_me/home_page/domain/models/home_model.dart';
 import 'package:with_me/home_page/ui/widgets/sort_dialog.dart';
 import 'package:with_me/home_page/utils/filter_logic.dart';
 import 'package:with_me/home_page/utils/sort.dart';
+import 'package:with_me/notification_page/notification_page.dart';
 import 'widgets/search_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -45,7 +46,12 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.transparent,
         actions: [
           IconButton(
-              onPressed: () {}, icon: const Icon(Icons.notifications_rounded))
+              onPressed: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (context) => const NotificationPage(),
+                ));
+              },
+              icon: const Icon(Icons.notifications_rounded))
         ],
       ),
       body: Column(

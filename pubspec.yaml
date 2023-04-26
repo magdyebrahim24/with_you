@@ -22,6 +22,7 @@ dependencies:
   equatable: ^2.0.5
   icons_launcher: ^2.1.0
   shared_preferences: ^2.1.0
+  multiselect: ^0.1.0
 
 
 

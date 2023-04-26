@@ -2,25 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:with_me/common/custom_widgets/custom_button.dart';
 import 'package:with_me/common/custom_widgets/text_form_field.dart';
 import 'package:with_me/common/utils/app_style/app_colors/app_colors.dart';
-
+import 'package:with_me/filter/models/user_type.dart';
 import 'complete_register_page.dart';
 
 class RegisterPage extends StatefulWidget {
-  const RegisterPage({Key? key}) : super(key: key);
+  final UserType userType;
+  const RegisterPage({Key? key, required this.userType}) : super(key: key);
 
   @override
   State<RegisterPage> createState() => _RegisterPageState();
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  final _formKey = GlobalKey<FormState>();
+  String? _userName;
+  String? _email;
+  String? _password;
+  String? _confirmPassword;
+
   @override
   Widget build(BuildContext context) {
-    final _formKey = GlobalKey<FormState>();
-    String? _userName;
-    String? _email;
-    String? _password;
-    String? _confirmPassword;
-
     return Scaffold(
       backgroundColor: AppColors.secondBackgroundColor,
       body: SafeArea(
@@ -83,7 +84,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     height: 40,
                   ),
                   CustomButton(
-                    onPressed: ()=> _onTapNext(),
+                    onPressed: () => _onTapNext(widget.userType),
                     text: "Next",
                   ),
                   Row(
@@ -113,7 +114,11 @@ class _RegisterPageState extends State<RegisterPage> {
     );
   }
 
-  void _onTapNext() => Navigator.of(context).push(MaterialPageRoute(
-        builder: (context) => const CompleteRegisterPage(),
+  void _onTapNext(UserType userType) {
+    if (_formKey.currentState!.validate()) {
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) =>  CompleteRegisterPage(userType: userType),
       ));
+    }
+  }
 }
