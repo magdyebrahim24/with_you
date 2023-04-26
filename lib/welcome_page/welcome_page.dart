@@ -4,14 +4,14 @@ import 'package:with_me/log_in_page/log_in_page.dart';
 import 'package:with_me/register_page/check_register_type_page.dart';
 import '../common/utils/app_style/app_colors/app_colors.dart';
 
-class WalkThrowPage extends StatefulWidget {
-  const WalkThrowPage({Key? key}) : super(key: key);
+class WelcomePage extends StatefulWidget {
+  const WelcomePage({Key? key}) : super(key: key);
 
   @override
-  State<WalkThrowPage> createState() => _WalkThrowPageState();
+  State<WelcomePage> createState() => _WelcomePageState();
 }
 
-class _WalkThrowPageState extends State<WalkThrowPage> {
+class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:with_me/common/domain/use_cases/set_login_usecase.dart';
-import 'package:with_me/walk_throw/walk_throw_page.dart';
+import 'package:with_me/welcome_page/welcome_page.dart';
+
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -18,7 +19,7 @@ class _ProfilePageState extends State<ProfilePage> {
         IconButton(
             onPressed: () async {
               Navigator.of(context).pushReplacement(MaterialPageRoute(
-                builder: (context) => const WalkThrowPage(),
+                builder: (context) => const WelcomePage(),
               ));
               await _setLogInUseCase(false);
             },

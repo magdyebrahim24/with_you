@@ -171,6 +171,17 @@ const Map<String, dynamic> apiHomeLocalData = {
       "gender": Gender.Male,
       "country": Country.Egypt,
       "userType":UserType.Tourist,
+    },{
+      "image": "https://www.mnp.ca/-/media/foundation/integrations/personnel/2020/12/16/13/57/personnel-image-4483.jpg?h=800&w=600&hash=9D5E5FCBEE00EB562DCD8AC8FDA8433D",
+      "name": "Moamen ",
+      "rate": 5,
+      "address": "Egypt / Mansoura / El hank manta",
+      "price": 1000000,
+      "age": 24,
+      "language": Languages.Arabic,
+      "gender": Gender.Male,
+      "country": Country.Egypt,
+      "userType":UserType.Tourist,
     },
   ]
 };
