@@ -33,7 +33,7 @@ class _SplashPageState extends State<SplashPage> {
       backgroundColor: AppColors.backgroundColor,
       body: Center(
           child: Image.asset(
-        AppImagesPaths.splashLogo,
+        AppImagesPaths.splashSecondLogo,
         scale: 1.2,
         isAntiAlias: true,
       )),
