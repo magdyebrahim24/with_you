@@ -1,8 +1,4 @@
-import 'package:with_me/filter/models/country.dart';
 import 'package:with_me/filter/models/filter_model.dart';
-import 'package:with_me/filter/models/gender.dart';
-import 'package:with_me/filter/models/languages.dart';
-import 'package:with_me/filter/models/user_type.dart';
 import 'package:with_me/home_page/domain/models/home_model.dart';
 
 class FilterLogic {

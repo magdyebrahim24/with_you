@@ -4,7 +4,6 @@ import 'package:with_me/common/utils/app_style/app_colors/app_colors.dart';
 import 'package:with_me/filter/models/user_type.dart';
 import 'package:with_me/register_page/register_page.dart';
 
-import '../common/custom_widgets/custom_appbar.dart';
 
 class RegisterTypePage extends StatelessWidget {
   const RegisterTypePage({Key? key}) : super(key: key);

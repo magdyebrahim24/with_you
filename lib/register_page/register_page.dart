@@ -91,7 +91,7 @@ class _RegisterPageState extends State<RegisterPage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text("Don\'t Have an Account?"),
+                      const Text("Don't Have an Account?"),
                       const SizedBox(
                         width: 10,
                       ),

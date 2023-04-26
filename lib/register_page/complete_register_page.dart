@@ -8,7 +8,6 @@ import 'package:with_me/filter/models/country.dart';
 import 'package:with_me/filter/models/languages.dart';
 import 'package:with_me/filter/models/user_type.dart';
 import 'package:with_me/filter/widgets/drop_down_button.dart';
-import 'package:with_me/home_page/ui/home_page.dart';
 import 'package:with_me/host_page.dart';
 
 class CompleteRegisterPage extends StatefulWidget {

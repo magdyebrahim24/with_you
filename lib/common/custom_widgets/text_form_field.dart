@@ -43,7 +43,7 @@ class _AppTextFormFiledState extends State<AppTextFormFiled> {
           return null;
         },
         decoration: InputDecoration(contentPadding: widget.contentPadding,
-            prefixIconConstraints: BoxConstraints(maxWidth: 50,minWidth: 10),
+            prefixIconConstraints: const BoxConstraints(maxWidth: 50,minWidth: 10),
             fillColor: Colors.white,
             prefixIcon: widget.leadingWidget,
             filled: true,

@@ -3,7 +3,6 @@ import 'package:with_me/common/custom_widgets/custom_button.dart';
 import 'package:with_me/common/custom_widgets/text_form_field.dart';
 import 'package:with_me/common/domain/use_cases/set_login_usecase.dart';
 import 'package:with_me/common/utils/app_style/app_colors/app_colors.dart';
-import 'package:with_me/home_page/ui/home_page.dart';
 import 'package:with_me/host_page.dart';
 import 'package:with_me/register_page/check_register_type_page.dart';
 
@@ -89,7 +88,7 @@ class _LogInPageState extends State<LogInPage> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text("Don\'t Have an Account?"),
+                      const Text("Don't Have an Account?"),
                       const SizedBox(
                         width: 10,
                       ),
